@@ -1,5 +1,7 @@
 package com.example;
 
+import java.util.*;
+
 public class HolaMundo {
     /**
      @author Julio
@@ -27,7 +29,57 @@ public class HolaMundo {
 
         IterarEn(1);
         IterarEn(2);
+
+        ListarStrings();
+        Listas();
+        Mapas();
     }
+
+    private static void Mapas() {
+        Map<String,String> personas = new HashMap<>();
+
+        personas.put("1231231231","Juan Cruz");
+        personas.put("312312","Julian Rodriguez");
+        personas.put("213123","Roman Chialva");
+
+        for (String key : personas.keySet()){
+            System.out.println("Key: "+key);
+        }
+        for (String value : personas.values()){
+            System.out.println("Value: "+value);
+        }
+
+        for (Map.Entry<String, String> persona : personas.entrySet()) {
+            System.out.println(persona.getKey() + " = " + persona.getValue());
+        }
+
+        personas.forEach((key,value)->{
+            System.out.println(key+" = "+value);
+        });
+
+
+    }
+
+    private static void Listas() {
+
+        List<String> nombres = new  ArrayList<>();
+        nombres.add("Juan");
+        nombres.add("Ernando");
+        nombres.add("Julio");
+
+        for (String nombre : nombres) {
+            System.out.println(nombre);
+        }
+    }
+
+    private static void ListarStrings() {
+        String hola = "hola mundo";
+        System.out.println("Cantidad de letras: "+hola.length());
+        System.out.println("Todo Mayusculas: " +hola.toUpperCase());
+        System.out.println("Todo Minusculas: "+hola.toLowerCase());
+        System.out.println("Quitar espacios: "+hola.trim());
+    }
+
     private static void IterarEn(int n){
         switch (n){
             case 1: Bucles.bucleWhile(7); break;
