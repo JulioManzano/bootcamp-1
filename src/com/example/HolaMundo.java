@@ -14,8 +14,6 @@ public class HolaMundo {
         De
         Comentarios
          */
-
-
         //Funcion void
         ImprimirHolaMundo();
         //Funcion Retorno String
@@ -26,8 +24,16 @@ public class HolaMundo {
         Restar(5,3);
         Dividir(8,2);
         Multiplicar(2,4);
-    }
 
+        IterarEn(1);
+        IterarEn(2);
+    }
+    private static void IterarEn(int n){
+        switch (n){
+            case 1: Bucles.bucleWhile(7); break;
+            case 2: Bucles.bucleFor(7); break;
+        }
+    }
     private static void Dividir(double a, double b) throws NumberFormatException{
         try{
             if(b == 0){
