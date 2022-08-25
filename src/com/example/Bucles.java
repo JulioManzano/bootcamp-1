@@ -10,6 +10,8 @@ public class Bucles {
     public static void bucleWhile(int n){
         int i = 0;
         while(i<n){
+            if(i == 4) continue;
+
             System.out.println("While-Numero: "+i);
             i++;
         }
